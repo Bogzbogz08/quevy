@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  display: block;
+  overflow: visible;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+i {
+  margin-right: 10px;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2vw;
+  font-size:5.5vw;
+  color: #95BDFF;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2vw;
+  font-size:4.3vw;
+  color: #618ed6;
+}
+p {
+  font-size: 1.8vw;
+  font-family: "Roboto", sans-serif;
+  color: #2862c0;
+  margin-bottom: 1vw;
+  margin-left: 0.5vw;
+}
+.lessoncontent {
+  border: solid 0.2vw #134699;
+  border-radius: 3vw;
+  margin: 1vw 0.5vw 0vw 0.5vw;
+  padding: 1vw;
+}
+.frame {
+  display: block;
+  border: none;
+  margin-top: 1px;
+  position: absolute;
+  min-height: 1300px;
+}
+.framebtn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #95BDFF;
+    border: none;
+    border-radius: 1vw;
+    font-size: 3vw;
+    transition-duration: 0.3s;
+    padding: 0px 3vw 0px 3vw;
+    color: #fff;
+    margin: 0px 1vw 0px 1vw;
+    cursor: pointer;
+} 
+.framebtn:hover {
+  background-color: #618ed6;
+}
+.listitem {
+  font-size: 1.8vw;
+  font-family: "Roboto", sans-serif;
+  color: #2862c0;
+  margin-left: 2.5vw;
+}
+/** Pagination **/
+.pagination {
+  margin: auto;
+  margin-top: 2.5vw;
+  width: 26.5vw;
+}
+.pagination a {
+  color: #134699;
+  float: left;
+  padding: 0.8vw 1.6vw;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 5vw;
+  font-size: 1.5vw;
+}
+
+.pagination a.active {
+  background-color: #134699;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:400px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:700px) {
+  /* For mobile phones: */
+  h1 {font-size: 20vw;}
+  h2 {font-size: 12vw;}
+  p {font-size: 6vw; margin-bottom: 2vw;}
+  .listitem {font-size: 6vw; margin-left: 7vw;}
+  .framebtn {font-size:8vw;}
+}
+@media only screen and (max-height:600px) {
+  /* For mobile phones: */
+  h1 {font-size: 7vw;}
+  h2 {font-size: 4vw;}
+  p {font-size: 2vw;}
+  .framebtn {font-size:5vw;}
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .pagination a {font-size: 7.5vw;}
+  .pagination {width: 42.5vw;}
+}
+/* body animation on load */
+
+body {
+  animation: fadeInAnimation ease-in-out 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}

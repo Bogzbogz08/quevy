@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css2?family=Sarina&display=swap);
+*{
+  margin: 0;
+  padding: 0;
+
+}
+  
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    letter-spacing: 2px;
+    font-size: 4.5vw;
+    font-family: 'Sarina', cursive;
+    text-shadow: 0.2vw 0.2vw 0.2vw rgb(20, 75, 119);
+    position: absolute;
+
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size:14px;
+    color: #95BDFF;
+  }
+  
+  .header {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(#95BDFF, rgb(125, 202, 249) 100%);
+    color:white;
+  }
+  .logo {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  
+  .inner-header {
+    height:65vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+    
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+    transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  
+  body {
+    animation: fadeInAnimation ease-in-out 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+  }
+
+  .btn {
+    -webkit-user-select: none;       
+-moz-user-select: none;
+-ms-user-select: none; 
+user-select: none; 
+  }
+
+  .btn1 {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 1vw;
+    font-size: 3vw;
+    transition-duration: 0.3s;
+    padding: 0vw 1vw 0vw 1vw;
+    color: #82a8e6;
+  }
+  .btn1:hover {
+    transition-duration: 0.7s;
+    background-color: #e0f5ff;
+  }
+  .btn1:active {
+    transition-duration: 0.7s;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .start {
+    position: absolute;
+    margin-left: 43vw;
+    margin-top: -10%;
+  }
+  .start a {
+    text-decoration: none;
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:15vw;
+    }
+    .btn1 {
+      font-size: 9vw;
+      padding: 1vw 10vw 1vw 10vw;
+    }
+    .start {
+      margin-left: 28vw;
+    }
+  }
+  /** Button **/
